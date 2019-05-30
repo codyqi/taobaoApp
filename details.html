@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="swiper-4.5.0/dist/css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="details.css"/>
+	<body>
+		<div id="main">
+			<!--轮播图-->
+			<div class="swiper-container">  
+			    <div class="swiper-wrapper">
+			    	<!--<div class="swiper-slide">
+				    	<img src="img/carouselBox61.jpg"/>
+				    </div>-->
+			    </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+			    <!-- Add Navigation -->
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+		  	</div>
+		</div>
+	</body>
+	<script src="swiper-4.5.0/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			//正则获取参数
+			function getQueryString(name) {
+		       var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		       var r = window.location.search.substr(1).match(reg);
+		       if(r != null) {
+		             return decodeURIComponent(r[2]);
+		       }
+		       return '';
+			}
+			var pid=getQueryString("gid");
+			console.log(pid)
+			$.ajax({
+				type:"post",
+				url:"https://api.ymduo.com/item/index",
+				async:true,
+				data:{
+					"gid": pid
+				},
+				success:function(res){
+					console.log(res)
+					var imgsArr=res.result.data.image;
+					var str=""
+					console.log(imgsArr)
+					$.each(imgsArr, function(index,ele) {
+						str+='<div class="swiper-slide">'
+				    			+'<img src="'+ele+'"/>'
+				    		 +'</div>'
+					});
+					$(".swiper-wrapper").append(str)
+					var swiper = new Swiper('.swiper-container', {
+					    spaceBetween: 30,
+					    centeredSlides: true,
+					    autoplay: {
+					        delay: 2500,
+					        disableOnInteraction: false,
+					    },
+					    pagination: {
+					        el: '.swiper-pagination',
+					        clickable: true,
+					    },
+					    navigation: {
+					        nextEl: '.swiper-button-next',
+					        prevEl: '.swiper-button-prev',
+					    },
+				    });
+				}
+			});
+			//屏幕适配
+			function rem (doc, win) {  
+			  let docEl = doc.documentElement; //html 考虑以及兼容了 屏幕旋转的事件
+			  //判断事件orientationchange 横屏 事件  或resize 
+			  let resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';  
+			  
+			  		let recalc = function () {         
+			  			var clientWidth = docEl.clientWidth;   //获取屏幕大小
+			  			if (!clientWidth){ return };   //未获取屏幕尺寸        
+			  			//屏幕大于750
+			  			if (clientWidth >= 1242) {
+			                 docEl.style.fontSize = '100px';
+			            } else {
+//			            	html的font-size         100* 设备宽度 / 750
+			                 docEl.style.fontSize = 100*(clientWidth / 1242)+ 'px';
+			            }
+			      };   
+			      if (!doc.addEventListener) {return ;}//addEventListener 兼容判断
+  
+			    win.addEventListener(resizeEvt, recalc, false);               // 屏幕大小以及旋转变化自适应
+			    doc.addEventListener('DOMContentLoaded', recalc, false);     // 页面初次打开自适应
+			    recalc();
+			}
+			rem(document,window); 
+		}
+	</script>
+</html>
