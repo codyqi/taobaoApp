@@ -229,12 +229,11 @@ input::-webkit-input-placeholder {
 	border-top: .01rem solid #dddddd;
 	border-bottom: .01rem solid #dddddd;
 	position: fixed;
-	top: 6.04rem;
+	bottom: 0;
 }
 .bottom_nav_wrap{
 	display: flex;
 	position: fixed;
-	bottom: 0;
 	background: white;
 }
 .bottom_nav_wrap li{
