@@ -9,8 +9,6 @@ body{
 }
 #main{
 	width: 100%;
-	/*height: 6.61rem;*/
-	position: relative;
 }
 .head{
 	height: .5rem;
@@ -227,10 +225,8 @@ input::-webkit-input-placeholder {
 }
 /*手机底部栏*/
 .bottom_nav{
-	position: absolute;
-	bottom: 0;
 	height: .54rem;
-	background: white;
+	
 	border-top: .01rem solid #dddddd;
 	border-bottom: .01rem solid #dddddd;
 	position: fixed;
@@ -238,6 +234,9 @@ input::-webkit-input-placeholder {
 }
 .bottom_nav_wrap{
 	display: flex;
+	position: fixed;
+	top: 6.65rem;
+	background: white;
 }
 .bottom_nav_wrap li{
 	width: .82rem;
