@@ -226,7 +226,6 @@ input::-webkit-input-placeholder {
 /*手机底部栏*/
 .bottom_nav{
 	height: .54rem;
-	
 	border-top: .01rem solid #dddddd;
 	border-bottom: .01rem solid #dddddd;
 	position: fixed;
@@ -235,7 +234,7 @@ input::-webkit-input-placeholder {
 .bottom_nav_wrap{
 	display: flex;
 	position: fixed;
-	top: 6.65rem;
+	bottom: 0;
 	background: white;
 }
 .bottom_nav_wrap li{
