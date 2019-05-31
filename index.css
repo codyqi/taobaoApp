@@ -9,7 +9,8 @@ body{
 }
 #main{
 	width: 100%;
-	height: 6.61rem;
+	/*height: 6.61rem;*/
+	position: relative;
 }
 .head{
 	height: .5rem;
@@ -125,9 +126,9 @@ input::-webkit-input-placeholder {
 /*抢购       有好货*/
 .has_goods_wrap{
 	width: 100%;
-	background: red;
 	height: 2.06rem;
 	display: flex;
+	justify-content: space-between;
 }
 .buying{
 	width: 1.68rem;
@@ -226,7 +227,8 @@ input::-webkit-input-placeholder {
 }
 /*手机底部栏*/
 .bottom_nav{
-width: 100%;
+	position: absolute;
+	bottom: 0;
 	height: .54rem;
 	background: white;
 	border-top: .01rem solid #dddddd;
@@ -255,13 +257,4 @@ width: 100%;
 	line-height: .19rem;
 }
 
-
-
-
-
-
-
-.temp{
-	height: 500px;
-}
 
