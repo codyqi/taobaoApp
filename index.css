@@ -95,7 +95,7 @@ input::-webkit-input-placeholder {
 /*图标*/
 .kind{
 	width: 100%;
-	height: 1.84rem;
+	/*height: 1.84rem;*/
 	background: white;
 	margin: .1rem 0;
 	box-sizing: border-box;
@@ -129,29 +129,32 @@ input::-webkit-input-placeholder {
 	justify-content: space-between;
 }
 .buying{
-	width: 1.68rem;
+	width: 40%;
 }
 .buying img{
-	width: 1.68rem;
-	height: 2.06rem;
+	width: 100%;
+	height: 100%;
 }
 .has_goods{
-	width: 2.34rem;
+	width: 60%;
+	height: 2.06rem;
 }
 .top_wrap{
-	width: 2.34rem;
+	width: 100%;
 	height: .75rem;
 }
 .top_wrap img{
-	width: 2.34rem;
-	height: .75rem;
+	width: 100%;
+	height: 100%;
 }
 .bottom_wrap{
 	display: flex;
+	width: 100%;
+	height: 1.31rem;
 }
 .bottom_wrap>img{
-	width: 1.17rem;
-	height: 1.31rem;
+	width: 50%;
+	height: 100%;
 }
 /*猜你喜欢*/
 .tab{
@@ -166,6 +169,7 @@ input::-webkit-input-placeholder {
 	font-size: .16rem;
 	text-align: center;
 	line-height: .38rem;
+	justify-content: space-between;
 }
 .tab_lis_wrap .btn{
 	width: 1.13rem;
@@ -232,12 +236,14 @@ input::-webkit-input-placeholder {
 	bottom: 0;
 }
 .bottom_nav_wrap{
+	width: 100%;
 	display: flex;
 	position: fixed;
+	flex-grow: 1;
 	background: white;
 }
 .bottom_nav_wrap li{
-	width: .82rem;
+	width: 20%;
 	height: .54rem;
 	flex-grow: 1;
 	text-align: center;

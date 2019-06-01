@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="swiper-4.5.0/dist/css/swiper.min.css"/>
 	<link rel="stylesheet" type="text/css" href="details.css"/>
 	<body>
@@ -17,13 +18,56 @@
 			    </div>
 			    <!-- Add Pagination -->
 			    <div class="swiper-pagination"></div>
-			    <!-- Add Navigation -->
-			    <div class="swiper-button-prev"></div>
-			    <div class="swiper-button-next"></div>
 		  	</div>
+		  	<!--价格说明-->
 		  	<div class="price_wrap">
-		  		<p class="price"></p>
+		  		<div class="num_wrap">
+		  			<p class="price">￥5500</p>
+		  			<p class="old_price">价格:￥5500</p>
+		  		</div>
+		  		<div class="name_wrap">
+		  			<div class="left">
+		  				<p>fdjsalfjdasljfldas反倒是恐龙分集使肌肤啦司法鉴定所</p>
+		  			</div>
+		  			<div class="right">
+		  				<img src="img/ricon.png"/>
+		  			</div>
+		  		</div>
+		  		<div class="sell_send">
+		  			<span class="kuai">快递:0.00</span>
+		  			<span class="month_sell">月销15</span>
+		  			<span class="place">广东广州</span>
+		  		</div>
 		  	</div>
+		  	<div class="intrduce">
+		  			——————宝贝详情——————
+		  	</div>
+	  		<!--详情大图-->
+	  		<div class="bigimg">
+	  			<!--<img src="" alt="" />-->
+	  		</div>
+	  		<div class="bottom_wrap">
+	  			<ul class="lis_bottom_wrap">
+	  				<li class="three">
+	  					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+	  					<p>客服</p>
+	  				</li>
+	  				<li class="three">
+	  					<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+	  					<p>店铺</p>
+	  				</li>
+	  				<li class="three">
+	  					<i class="fa fa-heart" aria-hidden="true"></i>
+	  					<p>收藏</p>
+	  				</li>
+	  				<li class="two_car two">
+	  					加入购物车
+	  				</li>
+	  				<li class="two_buy two">
+	  					立即购买
+	  				</li>
+	  			</ul>
+	  		</div>
 		</div>
 	</body>
 	<script src="swiper-4.5.0/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
@@ -69,12 +113,10 @@
 					    pagination: {
 					        el: '.swiper-pagination',
 					        clickable: true,
-					    },
-					    navigation: {
-					        nextEl: '.swiper-button-next',
-					        prevEl: '.swiper-button-prev',
-					    },
+					    }
 				    });
+				    var bigImg=res.result.data.detail.in_detail;
+				  	$(".bigimg").append(bigImg)
 				}
 			});
 			//屏幕适配

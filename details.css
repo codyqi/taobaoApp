@@ -1,3 +1,12 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font-size: 16px;
+	background: #f4f4f4;
+}
 .wiper-container{
 	width: 100%;
 	height: 12.42rem;
@@ -8,4 +17,116 @@
 }
 .price_wrap{
 	height: 5.2rem;
+	box-sizing: border-box;
+	padding-left: .3rem;
+	padding-right: .3rem;
+	background: white;
+}
+.num_wrap{
+	height: 2rem;
+}
+.price{
+	color: #ff0039;
+	font-size: .80rem;
+	line-height: 1.23rem;
+}
+.old_price{
+	font-size: .50rem;
+	color: #919191;
+	line-height: .70rem;
+	text-decoration: line-through;
+}
+.name_wrap{
+	height: 1.8rem;
+	display: flex;
+	justify-content: space-between;
+	line-height: .83rem;
+}
+.name_wrap .left{
+	width: 10.28rem;
+	font-size: .47rem;
+}
+.name_wrap .right{
+	width: .55rem;
+	height: .55rem;
+}
+.name_wrap .right img{
+	width: 100%;
+	height: 100%;
+	margin-top: .58rem;
+}
+.sell_send{
+	height: .94rem;
+	display: flex;
+	justify-content: space-between;
+	margin-top: .35rem;
+	color: #979797;
+}
+.sell_send span{
+	flex-grow: 1;
+	line-height: .94rem;
+	font-size: .42rem;
+}
+.kuai{
+	text-align: left;
+}
+.month_sell{
+	text-align: center;
+}
+.place{
+	text-align: right;
+}
+.intrduce{
+	height: 1.2rem;
+	text-align: center;
+	font-size: .5rem;
+	line-height: 1.2rem;
+	color: #E0E0E0;
+}
+.bigimg{
+	text-align: center;
+}
+.bigimg img{
+	width: 100%;
+	height: 9.8rem;
+}
+/*底部*/
+.bottom_wrap{
+	width: 100%;
+	height: 1.44rem;
+	position: fixed;
+	background: white;
+	bottom: 0rem;
+}
+.lis_bottom_wrap{
+	display: flex;
+	justify-content: space-between;
+	height: 1.44rem;
+	text-align: center;
+}
+.lis_bottom_wrap .three{
+	width: 1.7rem;
+	border-right: 1px solid #dedede;
+	font-size: .55rem;
+}
+.lis_bottom_wrap i{
+	color: #6e6e6e;
+}
+.lis_bottom_wrap li:nth-child(1) i{
+	color: #57b6f8;
+}
+.lis_bottom_wrap p{
+	font-size: .43rem;
+} 
+.lis_bottom_wrap .two{
+	width: 3.84rem;
+	font-size: .55rem;
+	color: white;
+	line-height: 1.44rem;
+}
+.two_car{
+	background: #fe9402;
+}
+.two_buy{
+	background: #fe0036;
 }
